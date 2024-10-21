@@ -1,0 +1,16 @@
+type DbUser {
+    id: ID!
+    username: String!
+    email: String!
+    password: String!
+    UF: String
+    createdAt: String
+}
+
+type Query {
+    getUsers: [DbUser]
+}
+
+type Mutation {
+    createUser(username: String!, email: String!, password: String!, UF: String!): DbUser
+}
